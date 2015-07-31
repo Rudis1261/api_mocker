@@ -19,10 +19,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// ROUTES
+// RESPONSE HANDLERS
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+// ROUTE TO RESPONSE HANDLER MAPPING
 app.use('/', index);
 app.use('/users', users);
 
