@@ -1,28 +1,43 @@
 #!/bin/sh
 
-echo "[" `date` "] Detecting NodeJS Installation"
+echo "[" `date` "] Checking for NodeJS"
 echo ""
 echo ""
 echo ""
-
 which node > /dev/null
 if [ $? -gt 0 ];
 then
-    echo "ERROR :: NodeJS not installed, can't continue!"
+    echo "ERROR :: NodeJS not found, please install it"
     exit 1
 fi
 echo "[" `date` "] NodeJS Installed, Installing EXPRESS now"
+
+
+echo "[" `date` "] Checking for NPM"
+echo ""
+echo ""
+echo ""
+
+which npm > /dev/null
+if [ $? -gt 0 ];
+then
+    echo "ERROR :: NodeJS not installed, please install it"
+    exit 1
+fi
+echo "[" `date` "] NPM Installed"
+echo "[" `date` "] Installing EXPRESS now"
 sudo npm install -g express
 sudo npm install -g express-generator
+sudo npm install -g nodemon
 
-echo ""
-echo ""
-echo ""
-echo "[" `date` "] Generating API project"
-echo ""
-echo ""
-echo ""
-express app
+# echo ""
+# echo ""
+# echo ""
+# echo "[" `date` "] Generating API project"
+# echo ""
+# echo ""
+# echo ""
+# express app
 
 echo ""
 echo ""
@@ -34,5 +49,4 @@ npm install -d
 echo ""
 echo ""
 echo ""
-echo "[" `date` "] Starting Application (Ctr+C) to exit"
-npm start
+echo "[" `date` "] To start application run './start.sh' or './start.sh 9000' with the port"
