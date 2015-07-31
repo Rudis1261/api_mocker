@@ -5,6 +5,7 @@ router.get('/', function(req, res, next) {
 
     // JSON to respond with
     var data = {
+        'state' : "success",
         'page' : "/",
         'hello' : "World"
     };

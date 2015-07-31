@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/:user_id', function(req, res, next) {
+//router.get('/:user_id', function(req, res, next) {
+router.get('/(:user_id?)', function(req, res, next) {
 
     // JSON to respond with
     var response = {
@@ -54,12 +55,12 @@ router.get('/:user_id', function(req, res, next) {
 
     // If we have a user, respond with the data
     var getUser = req.params.user_id || false;
-    if (getUser !== false && typeof users[(getUser+1)] !== "undefined") {
+    if (getUser !== false && typeof users[(getUser-1)] !== "undefined") {
 
         // Modify the response
         response.state = "success";
         response.message = "Find the data";
-        response.data = users[(getUser+1)];
+        response.data = users[(getUser-1)];
     }
 
     // Respond with the data
