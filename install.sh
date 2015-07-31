@@ -21,7 +21,7 @@ echo ""
 which npm > /dev/null
 if [ $? -gt 0 ];
 then
-    echo "ERROR :: NodeJS not installed, please install it"
+    echo "ERROR :: NPM not installed, please install it"
     exit 1
 fi
 echo "[" `date` "] NPM Installed"
