@@ -108,3 +108,6 @@ module.exports = router;
 ####3. Add the "ROUTE TO RESPONSE HANDLER MAPPING" for it 
 ``app.use('/account', account);``
 
+### EXPRESS documentation
+Want to know more about how Express handles routing. Check out the awesome documentation:
+http://expressjs.com/guide/routing.html
