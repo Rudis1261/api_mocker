@@ -20,14 +20,14 @@ In your terminal run the version command:
 node -v
 ```
 
-Which should give you the version of NodeJS you are running. Mine gave ``v0.12.7`` which is the current latest version. 
+Which should give you the version of NodeJS you are running. Mine gave ``v0.12.7`` which is the current latest version for Ubuntu. On my Fedora mashien, thise version number is ``v0.10.36``. So it varies from operating system to operating system. 
 
 For NPM the command would similarly be:
 ```shell
 npm -v
 ```
 
-Which in my case gave ``2.11.3``, but this would change all the time. 
+Which in my case gave ``2.11.3``, but this would change all the time. On my Fedora mashien this is ``1.3.5`` as an example.  
 
 ### INSTALLING API MOCKER ITSELF
 
